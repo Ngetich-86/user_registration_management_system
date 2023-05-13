@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        #view-table-btn {
+          display: none;
+          background-color:blue;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        #user-info-heading {
+          display: none;
+          font-size: 24px;
+          font-weight: bold;
+          margin-top: 30px;
+          margin-bottom: 10px;
+        }
+        
+        #user-table {
+          display: none;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #user-table th, #user-table td {
+          text-align: left;
+          padding: 8px;
+        }
+        
+        #user-table th {
+          background-color: blueviolet;
+          color: white;
+        }
+        
+        #user-table tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+        
+        #user-table tr:hover {
+          background-color: #ddd;
+        }
+      </style>
+      
+    <title>User Mgmt System</title>
+</head>
+
+<body>
+    <div class="container1">
+        <h1 class="system">
+            User Management System
+        </h1>
+        <div>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="name" name="firstname" placeholder="Your name.." required>
+
+                <label for="userid">User id:</label>
+                <input type="number" id="id" name="id" placeholder="Your id.." required>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    
+                    
+                </select>
+                <label for="languages">Languages:</label>
+                <select id="languages" name="language">
+                    <option value="Afrikaans">Afrikaans</option>
+                    <option value="Albanian">Albanian</option>
+                    <option value="Arabic">Arabic</option>
+                    
+                </select>
+
+                <label for="userpass">Your Password:</label>
+                <input type="password" id="pass" name="pass" placeholder="Your password.." required>
+
+                <input type="submit" value="Submit" class="submit">
+                
+                <br>
+            </form>
+                <p id="success-message"></p>
+                <br>
+                <button id="view-table-btn" style="display: none;">View Table</button>
+                <h1 id="user-info-heading" style="display: none;">User Information Table</h1>
+                <table id="user-table" style="display: none;">
+                <thead>
+                    <tr>
+                    <th>Username</th>
+                    <th>User ID</th>
+                    <th>Country</th>
+                    <th>Languages</th>
+                    <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody id="table-data"></tbody>
+                </table>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
